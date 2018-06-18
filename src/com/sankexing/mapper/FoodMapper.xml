@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sankexing.mapper.FoodMapper">
+	<select id="getFoodsByProvinceId" resultMap="foodResultMap" parameterType="int">
+		select * from t_food where province_id = #{0} limit #{1}, #{2}
+	</select>
+	
+	<resultMap type="Food" id="foodResultMap">
+		<id property="id" column="id" />
+		<result property="name" column="name"/>
+		<result property="imgUrl" column="img_url"/>
+		<result property="provinceId" column="province_id"/>
+	</resultMap>
+</mapper>
