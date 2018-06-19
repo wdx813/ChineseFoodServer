@@ -70,8 +70,7 @@
 			<!-- 表示以save开头的方法都需要事务 propagation 表示事务的传播特性 REQUIRED 查看当前是否有事务，如果有，使用当前事务，如果没有开启新事务 -->
 			<tx:method name="save*" propagation="REQUIRED" />
 			<tx:method name="update*" propagation="REQUIRED" />
-			<tx:method name="find*" read-only="true" />
-			<tx:method name="*" propagation="REQUIRED" />
+			<tx:method name="find*" read-only="true" />  
 		</tx:attributes>
 	</tx:advice>
 	<aop:config>

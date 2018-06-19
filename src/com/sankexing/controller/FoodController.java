@@ -24,9 +24,9 @@ public class FoodController {
 	public R getFoods(int provinceId, int page) {
 		List<Food> list = foodService.getFoodsByProvinceId(provinceId, page);
 		Map<String, Object> data = new HashMap<>();
-		data.put("data", list);
+		data.put("foodList", list);
 		Map<String, Object> map = new HashMap<>();
-		map.putAll(data);
+		map.put("data", data);
 		return R.ok(map);
 	}
 }
