@@ -6,8 +6,8 @@ public enum ErrorMessage {
 	LOGIN_ERROR("E0001", "登录失败"),
 	JS_CODE("E0002", "JS_CODE是必需的"),
 	USER_EXITED("E0003", "该用户已存在"),
-	REGISTER_ERROR("E004","用户注册失败");
-	
+	REGISTER_ERROR("E0004","用户注册失败"),
+	TOKEN_ERROR("E0005", "token验证失败");
 	
 	
 	

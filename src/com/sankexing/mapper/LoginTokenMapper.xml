@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sankexing.mapper.LoginTokenMapper">
+	<select id="findToken" resultType="com.sankexing.entity.LoginToken" parameterType="String">
+		select * from t_login_token where openId = #{openId}
+	</select>
+	<select id="checkToken" resultType="com.sankexing.entity.LoginToken" parameterType="String">
+		select * from t_login_token where openId = #{openId} and token = #{token}
+	</select>
+	<insert id="saveToken" parameterType="com.sankexing.entity.LoginToken" keyProperty="id" useGeneratedKeys="true">
+		insert into t_login_token (openId, token) values (#{openId}, #{token})
+	</insert>
+</mapper>
