@@ -2,11 +2,11 @@ package com.sankexing.common;
 
 public enum ErrorMessage {
 
-	SUCCESS("E0000", "�����ɹ�"),
-	LOGIN_ERROR("E0001", "��¼ʧ��"),
-	JS_CODE("E0002", "JS_CODE�Ǳ����"),
-	USER_EXITED("E0003", "���û��Ѵ���"),
-	REGISTER_ERROR("E004","�û�ע��ʧ��");
+	SUCCESS("E0000", "操作成功"),
+	LOGIN_ERROR("E0001", "登录失败"),
+	JS_CODE("E0002", "JS_CODE是必需的"),
+	USER_EXITED("E0003", "该用户已存在"),
+	REGISTER_ERROR("E004","用户注册失败");
 	
 	
 	

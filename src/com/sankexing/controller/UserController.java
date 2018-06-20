@@ -23,8 +23,8 @@ public class UserController {
 	private UserService userService;
 	
 	@RequestMapping("/checkLogin")
-	public R checkLogin(String jsCode) {
-		// 验证参数
+	public R checkLogin(@RequestBody String jsCode) {
+		// 楠岃瘉鍙傛暟
 		if(jsCode == null || jsCode == "") {
 			return R.error(ErrorMessage.JS_CODE.getCode(), ErrorMessage.JS_CODE.getMsg());
 		}
@@ -34,19 +34,19 @@ public class UserController {
 		}
 		JSONObject json = (JSONObject) JSONObject.parse(loginResult);
 		String openid = (String) json.get("openid");
-		// 返回結果
+		// 杩斿洖绲愭灉
 		Map<String, Object> data = new HashMap<>();
-		data.put("openid", openid);
+		data.put("openId", openid);
 		Map<String, Object> map = new HashMap<>();
 		map.put("data", data);
 		return R.ok(map);
 	}
 	
-	@RequestMapping("/register")
+	@RequestMapping("/save")
 	public R register(@RequestBody User param) {
 		User user = userService.getUserByOpenId(param.getOpenId());
-		if(user != null) {
-			return userService.saveUser(user);
+		if(user == null) {
+			return userService.saveUser(param);
 		}
 		return R.ok();
 	}
