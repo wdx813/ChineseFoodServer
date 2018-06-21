@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2018-06-15 17:10:56
+Date: 2018-06-21 18:07:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,7 +25,7 @@ CREATE TABLE `t_food` (
   `img_url` varchar(255) DEFAULT NULL,
   `province_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=288 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=348 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_food
@@ -317,20 +317,97 @@ INSERT INTO `t_food` VALUES ('284', '玉林猪脚粉', 'https://chinese-food-125
 INSERT INTO `t_food` VALUES ('285', '云片糕', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuangXi/food/yun_pian_gao.jpg', '7');
 INSERT INTO `t_food` VALUES ('286', '粥品', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuangXi/food/zhou_pin.jpg', '7');
 INSERT INTO `t_food` VALUES ('287', '竹筒饭', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuangXi/food/zhu_tong_fan.jpg', '7');
+INSERT INTO `t_food` VALUES ('288', '安顺破酥包', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/an_shun_po_su_bao.jpg', '8');
+INSERT INTO `t_food` VALUES ('289', '八宝娃娃鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/ba_bao_wa-wa_yu.jpg', '8');
+INSERT INTO `t_food` VALUES ('290', '毕节臭豆腐干', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/bi_jie_chou_dou_fu_gan.jpg', '8');
+INSERT INTO `t_food` VALUES ('291', '毕节汤圆', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/bi_jie_tang_yuan.jpg', '8');
+INSERT INTO `t_food` VALUES ('292', '冰粉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/bing_fen.jpg', '8');
+INSERT INTO `t_food` VALUES ('293', '肠旺面', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/chang-wang_mian.jpg', '8');
+INSERT INTO `t_food` VALUES ('294', '炒香虫', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/chao_xiang_chong.jpg', '8');
+INSERT INTO `t_food` VALUES ('295', '冲冲糕', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/chong_chong_gao.jpg', '8');
+INSERT INTO `t_food` VALUES ('296', '豆腐圆子', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/dou-fu_yuan-zi.jpg', '8');
+INSERT INTO `t_food` VALUES ('297', '豆花面', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/dou_hua_mian.jpg', '8');
+INSERT INTO `t_food` VALUES ('298', '风猪', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/feng_zhu.jpg', '8');
+INSERT INTO `t_food` VALUES ('299', '杠子面', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/gang_zi_mian.jpg', '8');
+INSERT INTO `t_food` VALUES ('300', '糕粑', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/gao_ba.jpg', '8');
+INSERT INTO `t_food` VALUES ('301', '糕粑稀饭', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/gao_ba_xi_fan.jpg', '8');
+INSERT INTO `t_food` VALUES ('302', '怪噜饭', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/guai_lu_fan.jpg', '8');
+INSERT INTO `t_food` VALUES ('303', '罐罐鸡', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/guan_guan_ji.jpg', '8');
+INSERT INTO `t_food` VALUES ('304', '贵阳丝娃娃', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/gui_yang_si_wa_wa.jpg', '8');
+INSERT INTO `t_food` VALUES ('305', '荷叶糍粑', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/he_ye_zi_ba.jpg', '8');
+INSERT INTO `t_food` VALUES ('306', '黑糯米八宝饭', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/hei_nuo_mi_ba_bao_fan.jpg', '8');
+INSERT INTO `t_food` VALUES ('307', '红油米豆腐', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/hong_you_mi_dou_fu.jpg', '8');
+INSERT INTO `t_food` VALUES ('308', '花江狗肉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/hua_jiang_gou_rou.jpg', '8');
+INSERT INTO `t_food` VALUES ('309', '鸡肉汤圆', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/ji_rou_tang_yuan.jpg', '8');
+INSERT INTO `t_food` VALUES ('310', '凯里酸汤鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/kai_li_suan_tang_yu.jpg', '8');
+INSERT INTO `t_food` VALUES ('311', '康家脆哨面', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/kang_jia_cui_shao_mian.jpg', '8');
+INSERT INTO `t_food` VALUES ('312', '恋爱豆腐果', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/lian_ai_dou-fu_guo.jpg', '8');
+INSERT INTO `t_food` VALUES ('313', '凉拌折耳根', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/liang_ban_zhe_er_gen.jpg', '8');
+INSERT INTO `t_food` VALUES ('314', '米皮', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/mi_pi.jpg', '8');
+INSERT INTO `t_food` VALUES ('315', '南白黄糕', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/nan_bai_huang_gao.jpg', '8');
+INSERT INTO `t_food` VALUES ('316', '盘江狗肉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/pan_jiang_gou_roou.jpg', '8');
+INSERT INTO `t_food` VALUES ('317', '片鸡粉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/pian_ji_fen.jpg', '8');
+INSERT INTO `t_food` VALUES ('318', '苹果酥', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/ping_guo_su.jpg', '8');
+INSERT INTO `t_food` VALUES ('319', '青岩豆腐', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/qing_yan_dou_fu.jpg', '8');
+INSERT INTO `t_food` VALUES ('320', '青岩玫瑰糖', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/qing_yan_mei_gui_tang.jpg', '8');
+INSERT INTO `t_food` VALUES ('321', '清镇黄粑', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/bing_zhen_huang_ba.jpg', '8');
+INSERT INTO `t_food` VALUES ('322', '三合汤', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/san_he_tang.jpg', '8');
+INSERT INTO `t_food` VALUES ('323', '三香包子', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/san_xiang_bao_zi.jpg', '8');
+INSERT INTO `t_food` VALUES ('324', '砂锅粉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/sha_guo_fen.jpg', '8');
+INSERT INTO `t_food` VALUES ('325', '刷把头', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/shua_ba_tou.jpg', '8');
+INSERT INTO `t_food` VALUES ('326', '水城羊肉粉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/shui_cheng_yang_rou_fen.jpg', '8');
+INSERT INTO `t_food` VALUES ('327', '酸菜孜耳面', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/suan_cai_zi_er_mian.jpg', '8');
+INSERT INTO `t_food` VALUES ('328', '糖麻圆', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/tang_ma_yuan.jpg', '8');
+INSERT INTO `t_food` VALUES ('329', '天麻鸳鸯鸽', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/tian_ma_yuan_yang_ge.jpg', '8');
+INSERT INTO `t_food` VALUES ('330', '铜仁社饭', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/tong_ren_she_fan.jpg', '8');
+INSERT INTO `t_food` VALUES ('331', '碗耳糕', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/wan_er_gao.jpg', '8');
+INSERT INTO `t_food` VALUES ('332', '威宁炒荞饭', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/xian_ning_chao_qiao_fan.jpg', '8');
+INSERT INTO `t_food` VALUES ('333', '威宁火腿', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/xian_ning_huo_tui.jpg', '8');
+INSERT INTO `t_food` VALUES ('334', '威宁荞酥', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/xian_ning_qiao_su.jpg', '8');
+INSERT INTO `t_food` VALUES ('335', '乌江鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/wu_jiang_yu.jpg', '8');
+INSERT INTO `t_food` VALUES ('336', '吴家油炸汤圆', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/wu_jia_you_zha_tang_yuan.jpg', '8');
+INSERT INTO `t_food` VALUES ('337', '鸭溪凉粉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/ya_xi_liang_fen.jpg', '8');
+INSERT INTO `t_food` VALUES ('338', '燕麦炒面', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/yan_mai_chao_mian.jpg', '8');
+INSERT INTO `t_food` VALUES ('339', '洋芋粑', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/yang_yu_ba.jpg', '8');
+INSERT INTO `t_food` VALUES ('340', '糟辣脆皮鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/cao_la_cui_pi_yu.jpg', '8');
+INSERT INTO `t_food` VALUES ('341', '折耳根炒腊肉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/zhe_er_gen_chao_yu.jpg', '8');
+INSERT INTO `t_food` VALUES ('342', '贞丰糯米饭', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/zhen_feng_nuo_mi_fan.jpg', '8');
+INSERT INTO `t_food` VALUES ('343', '镇宁波波糖', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/zhen_ning_bo_bo_tang.jpg', '8');
+INSERT INTO `t_food` VALUES ('344', '镇远陈年道菜', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/zhen_yuan_chen_nian_dao_cai.jpg', '8');
+INSERT INTO `t_food` VALUES ('345', '状元蹄', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/zhuang_yuan_ti.jpg', '8');
+INSERT INTO `t_food` VALUES ('346', '遵义鸡蛋糕', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/zun_yi_ji_dan_gao.jpg', '8');
+INSERT INTO `t_food` VALUES ('347', '遵义羊肉粉', 'https://chinese-food-1256000358.cossh.myqcloud.com/GuiZhou/food/zun_yi_yang_rou_fen.jpg', '8');
+
+-- ----------------------------
+-- Table structure for t_login_token
+-- ----------------------------
+DROP TABLE IF EXISTS `t_login_token`;
+CREATE TABLE `t_login_token` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `openId` varchar(128) DEFAULT NULL,
+  `token` varchar(128) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of t_login_token
+-- ----------------------------
+INSERT INTO `t_login_token` VALUES ('1', 'o8C_50E2uUD8ozHSFCxrJXdykKEs', 'AEP+U9vOL0HmsnjZUIL77A==');
 
 -- ----------------------------
 -- Table structure for t_user
 -- ----------------------------
 DROP TABLE IF EXISTS `t_user`;
 CREATE TABLE `t_user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `openId` varchar(50) DEFAULT NULL,
   `nickname` varchar(50) DEFAULT NULL,
   `gender` int(2) DEFAULT NULL,
   `avatar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
+INSERT INTO `t_user` VALUES ('1', 'o8C_50E2uUD8ozHSFCxrJXdykKEs', 'lance', '1', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK2ZtfobzkOClGoXsIZRfpPuey6ql1J3KJD06MvAFcFeK3DWT55hu0HEe6CGfxc828QueYY70ZoGA/132');
