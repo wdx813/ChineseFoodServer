@@ -35,12 +35,16 @@ public class UserController {
 		if(jsCode == null || jsCode == "") {
 			return R.error(ErrorMessage.JS_CODE.getCode(), ErrorMessage.JS_CODE.getMsg());
 		}
+		// 获取openId
 		String loginResult =  UrlUtils.wxLogin(jsCode);
 		if(loginResult == null || loginResult == "") {
 			return R.error(ErrorMessage.LOGIN_ERROR.getCode(), ErrorMessage.LOGIN_ERROR.getMsg());
 		}
 		JSONObject json = (JSONObject) JSONObject.parse(loginResult);
 		String openId = (String) json.get("openid");
+		if(openId == null || openId == "") {
+			return R.error(ErrorMessage.OPENID_NEED.getCode(), ErrorMessage.OPENID_NEED.getMsg());
+		}
 		// 设置token
 		LoginToken loginToken = loginTokenService.findToken(openId);
 		String token = "";
@@ -49,7 +53,7 @@ public class UserController {
 			LoginToken newLoginToken = new LoginToken();
 			newLoginToken.setOpenId(openId);
 			newLoginToken.setToken(token);
-			loginTokenService.saveToken(loginToken);
+			loginTokenService.saveToken(newLoginToken);
 		} else {
 			token = loginToken.getToken();
 		}

@@ -5,7 +5,7 @@
 		select * from t_login_token where openId = #{openId}
 	</select>
 	<select id="checkToken" resultType="com.sankexing.entity.LoginToken" parameterType="String">
-		select * from t_login_token where openId = #{openId} and token = #{token}
+		select * from t_login_token where openId = #{0} and token = #{1}
 	</select>
 	<insert id="saveToken" parameterType="com.sankexing.entity.LoginToken" keyProperty="id" useGeneratedKeys="true">
 		insert into t_login_token (openId, token) values (#{openId}, #{token})

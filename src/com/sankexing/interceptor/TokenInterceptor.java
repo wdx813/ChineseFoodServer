@@ -38,13 +38,14 @@ public class TokenInterceptor implements HandlerInterceptor{
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response,
 			Object obj) throws Exception {
-		String openId = request.getParameter("openId");
-		String token = request.getParameter("token");
+		String openId = request.getHeader("openId");
+		String token = request.getHeader("token");
+		// 验证token
 		LoginToken loginToken = loginTokenService.checkToken(openId, token);
 		if(loginToken != null) {
 			return true;
 		}
-		
+		// 返回验证失败结果
 		response.setCharacterEncoding("UTF-8");  
 	    response.setContentType("application/json; charset=utf-8");
 		R r = R.error(ErrorMessage.TOKEN_ERROR.getCode(), ErrorMessage.TOKEN_ERROR.getMsg());
