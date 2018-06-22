@@ -8,7 +8,9 @@ public enum ErrorMessage {
 	USER_EXITED("E0003", "该用户已存在"),
 	REGISTER_ERROR("E0004","用户注册失败"),
 	TOKEN_ERROR("E0005", "token验证失败"),
-	OPENID_NEED("E0006", "openId必需的");
+	OPENID_NEED("E0006", "openId是必需的"),
+	PROVINCEID_NEED("E0007", "省份ID不能为空"),
+	PAGE_NEED("E0008", "页码不能为空");
 	
 	
 	
