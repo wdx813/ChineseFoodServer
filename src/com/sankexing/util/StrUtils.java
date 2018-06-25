@@ -48,4 +48,10 @@ public class StrUtils {
 		}
 		return (JSONObject) JSONObject.parse(str.toString());
 	}
+	
+	public static String StrToJsonObject(String params, String key) {
+		JSONObject json = (JSONObject) JSONObject.parse(params);
+		String value = json.getString(key);
+		return value;
+	}
 }

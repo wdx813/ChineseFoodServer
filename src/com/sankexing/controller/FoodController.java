@@ -6,15 +6,19 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.auth0.jwt.internal.com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sankexing.common.ErrorMessage;
 import com.sankexing.common.R;
 import com.sankexing.entity.Food;
 import com.sankexing.service.FoodService;
+import com.sankexing.util.StrUtils;
 
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @RestController
 @RequestMapping("/food")
 public class FoodController {
@@ -24,8 +28,6 @@ public class FoodController {
 	
 	@RequestMapping("/find/{provinceId}/{page}")
 	public R getFoods(@PathVariable int provinceId, @PathVariable int page) {
-		System.out.println("省份="+provinceId);
-		System.out.println("页码="+page);
 		if(provinceId == 0) {
 			return R.error(ErrorMessage.PROVINCEID_NEED.getCode(), ErrorMessage.PROVINCEID_NEED.getMsg());
 		}
@@ -38,5 +40,12 @@ public class FoodController {
 		Map<String, Object> map = new HashMap<>();
 		map.put("data", data);
 		return R.ok(map);
+	}
+	
+	@RequestMapping("/updateEatNum")
+	public R updateStatus(@RequestBody String params) {
+		int foodId = Integer.parseInt(StrUtils.StrToJsonObject(params, "foodId"));
+		int opType = Integer.parseInt(StrUtils.StrToJsonObject(params, "opType"));
+		return foodService.updateEatNum(foodId, opType);
 	}
 }

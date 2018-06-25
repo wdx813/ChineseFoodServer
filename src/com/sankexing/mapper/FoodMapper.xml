@@ -5,10 +5,19 @@
 		select * from t_food where province_id = #{0} limit #{1}, #{2}
 	</select>
 	
+	<select id="getFoodById" parameterType="Integer">
+		select * from t_food where id #{0}
+	</select>
+	
+	<update id="updateEatNum" parameterType="Integer">
+		update t_food set eat_num = #{0} where id = #{1}
+	</update>
+	
 	<resultMap type="Food" id="foodResultMap">
 		<id property="id" column="id" />
 		<result property="name" column="name"/>
 		<result property="imgUrl" column="img_url"/>
 		<result property="provinceId" column="province_id"/>
+		<result property="eatNum" column="eat_num"/>
 	</resultMap>
 </mapper>
