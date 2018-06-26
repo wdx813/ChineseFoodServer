@@ -5,9 +5,17 @@
 		select * from t_food where province_id = #{0} limit #{1}, #{2}
 	</select>
 	
-	<select id="getFoodById" parameterType="Integer">
-		select * from t_food where id #{0}
+	<select id="getFoodById" parameterType="Integer" resultMap="foodResultMap">
+		select * from t_food where id = #{0}
 	</select>
+	
+	<update id="updateFood" parameterType="Food">
+		update t_food set
+		<if test="eatNum != null">
+			eat_num = #{eatNum}
+		</if>
+		where id = #{id}
+	</update>
 	
 	<update id="updateEatNum" parameterType="Integer">
 		update t_food set eat_num = #{0} where id = #{1}

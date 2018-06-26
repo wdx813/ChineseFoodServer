@@ -5,6 +5,16 @@
 		select * from t_user where openId = #{openId}
 	</select>
 	<insert id="saveUser" parameterType="com.sankexing.entity.User" keyProperty="id" useGeneratedKeys="true">
-		insert into t_user (openId, nickname, gender, avatar) values (#{openId}, #{nickname}, #{gender}, #{avatar})
+		insert into t_user (openId, nickname, gender, avatar, taste_num) values (#{openId}, #{nickname}, #{gender}, #{avatar}, 0)
 	</insert>
+	<update id="updateTasteNum" parameterType="User">
+		update t_user set taste_num = #{tasteNum} where openId = #{openId} 
+	</update>
+	
+	<select id="getUserCount" resultType="int">
+		select count(*) from t_user
+	</select>
+	<select id="getSurpassCount" resultType="int">
+		select count(*) from t_user where taste_num &lt; #{0}
+	</select>
 </mapper>

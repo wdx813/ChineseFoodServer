@@ -74,4 +74,9 @@ public class UserController {
 		}
 		return R.ok();
 	}
+	
+	@RequestMapping("/submit")
+	public R submit(@RequestBody User param) {
+		return userService.getFinalResult(param.getFoodIds(), param.getOpenId());
+	}
 }

@@ -1,8 +1,9 @@
 package com.sankexing.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
-public class User implements Serializable{
+public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private Integer id;
@@ -10,17 +11,20 @@ public class User implements Serializable{
 	private String nickname;
 	private int gender;
 	private String avatar;
+	private Integer tasteNum;
+	private List<Integer> foodIds;
 
 	public User() {
 	}
 
 	public User(Integer id, String openId, String nickname, int gender,
-			String avatar) {
+			String avatar, Integer tasteNum) {
 		this.id = id;
 		this.openId = openId;
 		this.nickname = nickname;
 		this.gender = gender;
 		this.avatar = avatar;
+		this.tasteNum = tasteNum;
 	}
 
 	public Integer getId() {
@@ -63,10 +67,27 @@ public class User implements Serializable{
 		this.avatar = avatar;
 	}
 
+	public Integer getTasteNum() {
+		return tasteNum;
+	}
+
+	public void setTasteNum(Integer tasteNum) {
+		this.tasteNum = tasteNum;
+	}
+	
+	public List<Integer> getFoodIds() {
+		return foodIds;
+	}
+
+	public void setFoodIds(List<Integer> foodIds) {
+		this.foodIds = foodIds;
+	}
+
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", openId=" + openId + ", nickname="
-				+ nickname + ", gender=" + gender + ", avatar=" + avatar + "]";
+				+ nickname + ", gender=" + gender + ", avatar=" + avatar
+				+ ", tasteNum=" + tasteNum + "]";
 	}
 
 }

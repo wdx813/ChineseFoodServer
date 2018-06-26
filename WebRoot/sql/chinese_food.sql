@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50720
 File Encoding         : 65001
 
-Date: 2018-06-25 18:11:27
+Date: 2018-06-26 18:06:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,11 +31,11 @@ CREATE TABLE `t_food` (
 -- ----------------------------
 -- Records of t_food
 -- ----------------------------
-INSERT INTO `t_food` VALUES ('1', '艾窝窝', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/ai_wo_wo.jpg', '1', '0');
-INSERT INTO `t_food` VALUES ('2', '爆肚', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/bao_du.jpg', '1', '0');
-INSERT INTO `t_food` VALUES ('3', '北京烤鸭', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/bei_jing_kao_ya.jpg', '1', '0');
-INSERT INTO `t_food` VALUES ('4', '冰糖葫芦', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/bing_tang_hu_lu.jpg', '1', '0');
-INSERT INTO `t_food` VALUES ('5', '炒肝儿', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/chao_gan_er.jpg', '1', '0');
+INSERT INTO `t_food` VALUES ('1', '艾窝窝', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/ai_wo_wo.jpg', '1', '7');
+INSERT INTO `t_food` VALUES ('2', '爆肚', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/bao_du.jpg', '1', '12');
+INSERT INTO `t_food` VALUES ('3', '北京烤鸭', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/bei_jing_kao_ya.jpg', '1', '11');
+INSERT INTO `t_food` VALUES ('4', '冰糖葫芦', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/bing_tang_hu_lu.jpg', '1', '6');
+INSERT INTO `t_food` VALUES ('5', '炒肝儿', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/chao_gan_er.jpg', '1', '1');
 INSERT INTO `t_food` VALUES ('6', '褡裢火烧', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/ta_lian_huo_shao.jpg', '1', '0');
 INSERT INTO `t_food` VALUES ('7', '豆馅烧饼', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/dou_xian_shao_bing.jpg', '1', '0');
 INSERT INTO `t_food` VALUES ('8', '豆汁儿', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/dou_zhi_er.jpg', '1', '0');
@@ -58,10 +58,10 @@ INSERT INTO `t_food` VALUES ('24', '豌豆黄儿', 'https://chinese-food-1256000
 INSERT INTO `t_food` VALUES ('25', '银丝卷', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/yin_si_juan.jpg', '1', '0');
 INSERT INTO `t_food` VALUES ('26', '油茶', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/you_cha.jpg', '1', '0');
 INSERT INTO `t_food` VALUES ('27', '炸灌肠', 'https://chinese-food-1256000358.cossh.myqcloud.com/BeiJing/food/zha_guan_chang.jpg', '1', '0');
-INSERT INTO `t_food` VALUES ('28', '八公山豆腐', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/ba_gong_shan_dou_fu.jpg', '2', '0');
-INSERT INTO `t_food` VALUES ('29', '白切', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/bai_qie.jpg', '2', '0');
-INSERT INTO `t_food` VALUES ('30', '包公鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/bao_gong_yu.jpg', '2', '0');
-INSERT INTO `t_food` VALUES ('31', '曹操鸡', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/cao_cao_ji.jpg', '2', '0');
+INSERT INTO `t_food` VALUES ('28', '八公山豆腐', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/ba_gong_shan_dou_fu.jpg', '2', '2');
+INSERT INTO `t_food` VALUES ('29', '白切', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/bai_qie.jpg', '2', '2');
+INSERT INTO `t_food` VALUES ('30', '包公鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/bao_gong_yu.jpg', '2', '2');
+INSERT INTO `t_food` VALUES ('31', '曹操鸡', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/cao_cao_ji.jpg', '2', '1');
 INSERT INTO `t_food` VALUES ('32', '秤管糖', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/cheng_guan_tang.jpg', '2', '0');
 INSERT INTO `t_food` VALUES ('33', '臭桂鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/chou_gui_yu.jpg', '2', '0');
 INSERT INTO `t_food` VALUES ('34', '臭鳜鱼', 'https://chinese-food-1256000358.cossh.myqcloud.com/AnHui/food/chou_jue_yu.jpg', '2', '0');
@@ -127,9 +127,9 @@ INSERT INTO `t_food` VALUES ('93', '葡式蛋挞', 'https://chinese-food-1256000
 INSERT INTO `t_food` VALUES ('94', '水蟹粥', 'https://chinese-food-1256000358.cossh.myqcloud.com/AoMen/food/shui_xie_zhou.jpg', '3', '0');
 INSERT INTO `t_food` VALUES ('95', '猪扒包', 'https://chinese-food-1256000358.cossh.myqcloud.com/AoMen/food/zhu_pa_bao.jpg', '3', '0');
 INSERT INTO `t_food` VALUES ('96', '猪排包', 'https://chinese-food-1256000358.cossh.myqcloud.com/AoMen/food/zhu_pai_bao.jpg', '3', '0');
-INSERT INTO `t_food` VALUES ('97', '八大干', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/ba_da_gan.jpg', '4', '0');
-INSERT INTO `t_food` VALUES ('98', '白粿', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/bai_guo.jpg', '4', '0');
-INSERT INTO `t_food` VALUES ('99', '拌面', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/ban_mian.jpg', '4', '0');
+INSERT INTO `t_food` VALUES ('97', '八大干', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/ba_da_gan.jpg', '4', '1');
+INSERT INTO `t_food` VALUES ('98', '白粿', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/bai_guo.jpg', '4', '1');
+INSERT INTO `t_food` VALUES ('99', '拌面', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/ban_mian.jpg', '4', '1');
 INSERT INTO `t_food` VALUES ('100', '碧玉卷', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/bi_yu_juan.jpg', '4', '0');
 INSERT INTO `t_food` VALUES ('101', '扁肉燕', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/bian_rou_yan.jpg', '4', '0');
 INSERT INTO `t_food` VALUES ('102', '蛏熘', 'https://chinese-food-1256000358.cossh.myqcloud.com/FuJian/food/cheng_liu.jpg', '4', '0');
@@ -405,10 +405,13 @@ CREATE TABLE `t_user` (
   `nickname` varchar(50) DEFAULT NULL,
   `gender` int(2) DEFAULT NULL,
   `avatar` varchar(255) DEFAULT NULL,
+  `taste_num` int(11) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of t_user
 -- ----------------------------
-INSERT INTO `t_user` VALUES ('1', 'o8C_50E2uUD8ozHSFCxrJXdykKEs', 'lance', '1', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK2ZtfobzkOClGoXsIZRfpPuey6ql1J3KJD06MvAFcFeK3DWT55hu0HEe6CGfxc828QueYY70ZoGA/132');
+INSERT INTO `t_user` VALUES ('1', 'o8C_50E2uUD8ozHSFCxrJXdykKEs', 'lance', '1', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK2ZtfobzkOClGoXsIZRfpPuey6ql1J3KJD06MvAFcFeK3DWT55hu0HEe6CGfxc828QueYY70ZoGA/132', '8');
+INSERT INTO `t_user` VALUES ('2', 'o8C_50E2uUD8ozHSFCxrJXdykKEa', 'lance1', '1', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK2ZtfobzkOClGoXsIZRfpPuey6ql1J3KJD06MvAFcFeK3DWT55hu0HEe6CGfxc828QueYY70ZoGA/132', '2');
+INSERT INTO `t_user` VALUES ('3', 'o8C_50E2uUD8ozHSFCxrJXdykKEc', 'lance2', '1', 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK2ZtfobzkOClGoXsIZRfpPuey6ql1J3KJD06MvAFcFeK3DWT55hu0HEe6CGfxc828QueYY70ZoGA/132', '1');
